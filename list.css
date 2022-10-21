@@ -1,0 +1,12 @@
+.event{
+    display: flex;
+    background-color: #03befc;
+    margin: 50px 50px;
+    width: 50%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+span{
+    color: red;
+}
