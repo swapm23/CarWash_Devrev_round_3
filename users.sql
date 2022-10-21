@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2022 at 09:11 AM
+-- Generation Time: Oct 21, 2022 at 11:14 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -39,8 +39,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`sno`, `booking_name`, `date`, `location`) VALUES
-(18, 'Swapnil Mishra', '2022-10-21', 'Chennai'),
-(19, 'Abhinav Pathak', '2022-10-21', 'Chennai');
+(18, 'Swapnil Mishra', '2022-10-21', 'Chennai');
 
 -- --------------------------------------------------------
 
@@ -62,10 +61,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`user`, `sno`, `fname`, `lname`, `email`, `phone`) VALUES
-('admin', 1, 'Swapnil', 'Mishra', 'swapnilmishra@xyz.com', '1212121212'),
-('rage2366', 12, 'Prakhar', 'Patel', 'adfsad@afasf.com', '123124'),
-('Abhinav', 13, 'Abhinav', 'Pathak', 'xyasd@jkaf.com', '214214'),
-('xyz', 14, 'abc', 'cba', 'a@b.com', '12');
+('admin', 1, 'Swapnil', 'Mishra', 'swapnilmishra@xyz.com', '1212121212');
 
 -- --------------------------------------------------------
 
@@ -85,20 +81,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`sno`, `username`, `password`, `dt`) VALUES
-(1, 'admin', 'admin', '2021-10-06 14:03:57'),
-(2, 'rage', 'nicktv', '2021-10-07 17:18:24'),
-(3, 'ninja', 'reeve', '2021-10-07 17:18:43'),
-(4, 's4u', 'halwai', '2021-10-08 18:35:16'),
-(5, 'rishj', 'rish', '2021-10-16 08:30:31'),
-(6, 'flexgod', 'umair', '2021-10-19 18:55:19'),
-(7, 'mota', 'mota', '2021-10-19 18:56:20'),
-(8, 'barik', 'chin', '2021-10-20 20:20:34'),
-(9, 'jimsaken', 'valo', '2021-10-21 18:34:54'),
-(10, 'uttu', 'uttu', '2021-10-26 13:44:02'),
-(52, 'abcd', 'abcd', '2021-11-09 07:50:27'),
-(53, 'rage2366', '123', '2022-10-21 12:19:32'),
-(54, 'Abhinav', '1234', '2022-10-21 12:25:21'),
-(55, 'xyz', 'xyz', '2022-10-21 12:39:15');
+(1, 'admin', 'admin', '2021-10-06 14:03:57');
 
 --
 -- Indexes for dumped tables
@@ -131,19 +114,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
