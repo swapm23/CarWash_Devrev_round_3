@@ -2,3 +2,22 @@
     height: 84%;
     width: 121%;
 }
+#lform{
+    display: none;
+    margin-left: 10px;
+    width: 70%;
+}
+#sform{
+    display: none;
+    margin-left: 10px;
+    width: 70%;
+}
+#uform{
+    display: none;
+    margin-left: 10px;
+    width: 70%;
+}
+#warnn{
+    height: 50%;
+    width: 40%;
+}

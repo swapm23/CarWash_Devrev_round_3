@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2022 at 11:31 PM
+-- Generation Time: Oct 23, 2022 at 04:56 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,11 +42,12 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`bookingid`, `name`, `date`, `location`, `status`, `user`, `service`) VALUES
-(20, 'Prakhar', '2022-10-24', 'Chennai', 0, 'user1', 'water wash'),
-(21, 'Anurag', '2022-10-24', 'Bangalore', 0, 'user1', 'Vaccum cleaning'),
-(22, 'Hasnan Umair', '2022-10-24', 'Bangalore', 0, 'admin2', 'Vaccum cleaning'),
-(23, 'Reeve', '2022-10-24', 'Bangalore', 0, 'admin2', 'water wash'),
-(24, 'Abhinav Pathak', '2022-10-24', 'Chennai', 0, 'admin2', 'Vaccum cleaning');
+(13, 'Swapnil Mishra', '2022-10-23', 'Bangalore', 1, 'admin', 'Carwash'),
+(14, 'Hasnan Umair', '2022-10-13', 'Chennai', 1, 'user1', 'Carwash'),
+(15, 'Abhinav Pathak', '2022-10-25', 'Bangalore', -1, 'admin', 'Carwash'),
+(16, 'Reeve', '2022-10-12', 'Bangalore', 1, 'user1', 'Carwash'),
+(17, 'Prakhar Patel', '2022-10-18', 'Chennai', 0, 'user1', 'Carwash'),
+(18, 'Swapnil Mishra', '2022-10-12', 'Bangalore', 1, 'admin', 'Carwash');
 
 -- --------------------------------------------------------
 
@@ -106,8 +107,7 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`offered`) VALUES
-('water wash'),
-('Vaccum cleaning');
+('Carwash');
 
 -- --------------------------------------------------------
 
@@ -161,7 +161,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `bookingid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `bookingid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `profile`

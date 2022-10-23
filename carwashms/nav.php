@@ -4,7 +4,7 @@
 if($loggedin && $_SESSION['role'] == 1){
   require '../connect.php';
     echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
-          <div class="container-fluid">
+          <div class="container-fluid navdiv">
           <a class="navbar-brand" href="/carwashms/admin/admin.php">CAR WASH</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,9 +19,6 @@ if($loggedin && $_SESSION['role'] == 1){
               </li>
               <li class="nav-item"style="margin-inline: 10px;">
                 <a class="nav-link" href="/carwashms/bookings/booking_list.php">View Bookings</a>
-              </li>
-              <li class="nav-item" style="margin-inline: 10px;">
-                  <a class="nav-link" aria-current="page" href="/carwashms/bookings/requests.php">Manage User Requests</a>
               </li>
               <li class="nav-item" style="margin-inline: 10px;">
                 <a class="nav-link" href="/carwashms/logout.php">Logout</a>

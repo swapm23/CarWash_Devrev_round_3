@@ -4,14 +4,6 @@ require '../logincheck.php';
 require '../connect.php';
 $curr_user = $_SESSION['username'];
 $role = $_SESSION['role'];
-
-// if($role==0){
-//   $sql = "SELECT * FROM bookings where user = '$curr_user'";
-// }
-// else{   
-//   $sql = "SELECT * FROM bookings where service='carwash'";
-// }
-// $result = mysqli_query($conn, $sql);
 ?>
 
 <!doctype html>
@@ -33,9 +25,6 @@ $role = $_SESSION['role'];
   </head>
   <body>
     <?php require '../nav.php'; ?>
-  <!-- <section style="background: url(../cover.jpg);
-    background-size: ../cover;
-    height: calc(110.7vh - 80px);"> -->
   <div class="prof container">
     <div>
       <h2 class="text-left" style="margin: 30px 0px 0px -70px; text-decoration: underline; text-align: center;" >
@@ -50,35 +39,13 @@ $role = $_SESSION['role'];
         <th class="bg-success" scope="col">Booking For</th>
         <th class="bg-success" scope="col">Date</th>
         <th class="bg-success" scope="col">Location</th>
-        <th class="bg-success" scope="col">Status</th>
         <th class="bg-success" scope="col">Service</th>
-        <th class="bg-success" scope="col">Booked By</th>
+        <th class="bg-success" scope="col">Booked by</th>
+        <th class="bg-success" scope="col">Status </th>
       </tr>
     </thead>
     <tbody>
-    <?php
-      // while($row = mysqli_fetch_assoc($result)){
-      //   if($row["status"]==0){
-      //     $s = "Pending";
-      //   }
-      //   elseif($row["status"]==1){
-      //     $s = "Confirmed";
-      //   }
-      //   elseif($row["status"]==-1){
-      //     $s = "Canceled";
-      //   }
-      //   echo '
-      //   <tr>
-      //     <th scope="row">'.$row["bookingid"].'</th>
-      //     <td>'.$row["name"].'</td>
-      //     <td>'.$row["date"].'</td>
-      //     <td>'.$row["location"].'</td>
-      //     <td>'.$s.'</td>
-      //     <td>'.$row["service"].'</td>
-      //     <td>'.$row["user"].'</td>
-      //   </tr>';}
-      
-      ?>
+   
       <?php
        if($role == 1){
         $sql="select * from bookings";
@@ -104,7 +71,7 @@ $role = $_SESSION['role'];
         </tr>
         <?php }}
         else{
-          $sql="select * from bookings where user='$curr_user'";
+          $sql="select * from bookings where user='$curr_user' and status != -1";
           $result = mysqli_query($conn, $sql);
           while($row = mysqli_fetch_assoc($result)){
             ?>
@@ -128,8 +95,7 @@ $role = $_SESSION['role'];
       </tbody>
     </table>
   </div> 
-   <!-- <button class = "btn btn-success" onClick="window.location.reload();">Get updated status</button> -->
-   <?php
+    <?php
     if(!$loggedin){
       echo ("<script LANGUAGE='JavaScript'> window.alert('Session expired. Please re-login.');
       window.location.href='../index.php';
@@ -146,8 +112,5 @@ $role = $_SESSION['role'];
     $('#table_id').DataTable();
 } );
   </script>
- 
-  
-  
   </body>
 </html>
