@@ -1,0 +1,11 @@
+input[type="submit"]{
+    background: #2691d9;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background-color: #1966e2;
+    transition: .5s;
+}
